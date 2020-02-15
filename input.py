@@ -19,7 +19,7 @@ from sklearn.externals import joblib
 pac = joblib.load('model/pac_model.sav')
 tfidf = joblib.load('model/tfidf_model.sav')
 
-x=input('Enter News')
+x=input('Enter News : ')
 
 #set up tfidfvectorizor
 tfidf_vectorizor=TfidfVectorizer(stop_words='english', max_df=0.7)
@@ -30,4 +30,4 @@ tfidf_test=tfidf.transform([x,])
 y_pred=pac.predict(tfidf_test)
 
 
-print(y_pred)
+print("The news is %s"%(str(y_pred).strip("['']")))
