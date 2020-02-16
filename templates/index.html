@@ -6,6 +6,9 @@
     body{
       text-align: center;
     }
+    a{
+      text-decoration: none;
+    }
   </style>
 </head>
 <body >
@@ -17,12 +20,14 @@
   <h4><p class="w3-text-red">Write the news here to know whether its real or fake</p></h4>
 
   <form action="/" method='POST' >
-    <textarea name="news" rows="22" cols="90"></textarea>
+    <textarea name="news" rows="20" cols="90"></textarea>
     <br><br>
     <input type="submit" class="w3-btn w3-blue" > 
   </form>
 
   <h4><p id="result" class="w3-text-green">Your News is {{result}}</p></h4>
+
+  <h2><a href="https://github.com/elisontuscano/Fake-News-Detection" class="w3-text-red">Link for Github Code</a></h2>
 
 </body>
 </html>
